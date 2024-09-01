@@ -1,0 +1,22 @@
+.row-search-item{
+    width: 800px;
+    margin: 25px auto;
+    padding: 5px;
+    border-top: 1px solid #ddd;
+    display: flex;
+}
+.col-sm-3 img{
+    height: 100%;
+    width:150px ;
+    object-fit: contain;
+}
+.col-sm-8-details h6{
+    font-size: 24px;
+    color: blueviolet;
+}
+.col-sm-8-details p{
+   margin: 5px;
+}
+.col-sm-8-details span{
+    margin-right: 10px;
+}

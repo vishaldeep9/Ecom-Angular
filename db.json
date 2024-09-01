@@ -1,0 +1,168 @@
+{
+  "'seller": [
+    {
+      "id": "5847",
+      "name": "Vishal deep",
+      "email": "09vishaldeep@gmail.com",
+      "password": "Vishal@9"
+    },
+    {
+      "id": "3faa",
+      "name": "Nagesh",
+      "email": "nagesh1998@gmail.com",
+      "password": "Nagesh@9"
+    },
+    {
+      "id": "8346",
+      "name": "tommy",
+      "password": "tommy@123",
+      "email": "tommy@gmail.com"
+    },
+    {
+      "id": "8997",
+      "name": "peter",
+      "password": "peter@123",
+      "email": "peter@gmail.com"
+    },
+    {
+      "id": "436f",
+      "name": "bruce",
+      "password": "bruce@123",
+      "email": "bruce@gmail.com"
+    },
+    {
+      "id": "978d",
+      "name": "alena",
+      "password": "alena@123",
+      "email": "alena@123"
+    },
+    {
+      "id": "eec9",
+      "name": "chris",
+      "password": "chris@123",
+      "email": "chris@gmail.com"
+    },
+    {
+      "id": "e28c",
+      "name": "gray",
+      "password": "gray@123",
+      "email": "gray@gmail.com"
+    },
+    {
+      "id": "6061",
+      "name": "",
+      "password": "",
+      "email": ""
+    },
+    {
+      "id": "ef5b",
+      "name": "",
+      "password": "",
+      "email": ""
+    },
+    {
+      "id": "738a",
+      "name": "3",
+      "password": "3",
+      "email": "3"
+    },
+    {
+      "id": "08dc",
+      "name": "vishal deep",
+      "password": "dd",
+      "email": "09vishaldeep@gmail.com"
+    },
+    {
+      "id": "a802",
+      "name": "Nagesh",
+      "password": "Nagaesh@123",
+      "email": "nageshkumar312@gmail.com "
+    },
+    {
+      "id": "3447",
+      "name": "apple",
+      "password": "apple@123",
+      "email": "apple@1gmail.com"
+    },
+    {
+      "id": "0db6",
+      "name": "vishal deep",
+      "password": "vishal@123",
+      "email": "09vishaldeep@gmail.com"
+    }
+  ],
+  "products": [
+    {
+      "name": "Casio Vintage ",
+      "price": 1297.46,
+      "color": "Gray",
+      "category": "Watch",
+      "description": "Casio Vintage A158WA-1DF Black Digital Dial Silver Stainless Steel Band D011",
+      "imageUrl": "https://f.media-amazon.com/images/I/61ybeKQto8L._SY879_.jpg",
+      "id": "40a5"
+    },
+    {
+      "name": "Supersox Ankle Socks for Men & Women (Unisex) ",
+      "price": 583.4,
+      "color": "(Black, White, Grey Melange)",
+      "category": "Clothe",
+      "description": "Supersox Ankle Socks for Men & Women (Unisex) Made With Durable, Breathable Cotton, Ideal for Regular Casual Wear- Pack of 3, Free Size (Black, White, Grey Melange)",
+      "imageUrl": "https://f.media-amazon.com/images/I/81CdTxYMb5L._SX679_.jpg",
+      "id": "297c"
+    },
+    {
+      "name": "Helmet Tyex",
+      "price": 2899,
+      "color": "Blue",
+      "category": "Safety",
+      "description": "‎SAVIOUR PERFORMING PPE Saviour Industrial Safety Freedom Helmet with Ratchet HDPE Blue",
+      "imageUrl": "https://f.media-amazon.com/images/I/31NTqfrKWZL._SY300_SX300_QL70_FMwebp_.jpg",
+      "id": "b8da"
+    },
+    {
+      "name": "Shoes for Men & Woman",
+      "price": "2289.98",
+      "color": "Red-Black",
+      "category": "Footwear ",
+      "description": "Liberty Warrior Envy Neptune Safety Shoes for Men, Genuine Leather, Light Weight, Fiber Glass Toe, Yellow & Red, Sizes-5UK-11UK",
+      "imageUrl": "https://f.media-amazon.com/images/I/81InD8kN6PL._SY575_.jpg",
+      "id": "baa0"
+    },
+    {
+      "id": "82c7",
+      "name": "TP-Link 600 Mbps WiFi Wireless Network USB Adapter for Desktop Pc",
+      "price": 1015.25,
+      "color": "Black",
+      "category": "Computer Accessories ",
+      "description": "TP-Link 600 Mbps WiFi Wireless Network USB Adapter for Desktop Pc with 2.4Ghz/5Ghz High Gain Dual Band 5Dbi Antenna Wi-Fi,Supports Windows 11/10/8.1/8/7/Xp,Mac Os 10.15&Earlier(Archer T2U Plus),Black",
+      "imageUrl": "https://f.media-amazon.com/images/I/41Qo0EGG4TL._SX522_.jpg"
+    },
+    {
+      "id": "a29e",
+      "name": "Dell MS116 Wired Optical Mouse",
+      "price": 245.76,
+      "color": "Black",
+      "category": "Computer Accessories ",
+      "description": "Dell MS116 Wired Optical Mouse, 1000DPI, LED Tracking, Scrolling Wheel, Plug and Play",
+      "imageUrl": "https://f.media-amazon.com/images/I/51a1LryFTZS._SL1500_.jpg"
+    },
+    {
+      "id": "e611",
+      "name": "Lenovo L-Series 54.48 cm (21.45 inch) FHD Ultraslim Monitor",
+      "price": 5465.25,
+      "color": "White",
+      "category": "Computer Accessories ",
+      "description": "Lenovo L-Series 54.48 cm (21.45 inch) FHD Ultraslim Monitor |16.7 Mn Colors, 75Hz, 4ms, AMD FreeSync, HDMI, TUV Eye Comfort & Low Blue Light, Smart Display Customization Artery L22e-40",
+      "imageUrl": "https://f.media-amazon.com/images/I/71uAPvwB5uL._SL1500_.jpg"
+    },
+    {
+      "id": "5f38",
+      "name": "BenQ SW272U 27\" Pro Photo&Video Editing Monitor",
+      "price": 103813.56,
+      "color": "Grey",
+      "category": "Computer Accessories ",
+      "description": "BenQ SW272U 27\" Pro Photo&Video Editing Monitor| 3840x2160p 4K| IPS| 99%AdobeRGB| 99%P3| Hdr10/Hlg|Shading Hood| Pantone Validated| DeltaE<1.5| HDMI| Card Reader| UsbC(90W)| Wireless Controller|(Grey)",
+      "imageUrl": "https://f.media-amazon.com/images/I/51ylq5O+mjL._SL1000_.jpg"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+.seller-auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #eceff1, #ffffff);
+}
+
+.seller-auth .signup {
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    padding: 1.8rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 320px; /* Reduced max-width for a smaller form box */
+    text-align: center;
+    transition: transform 0.3s ease;
+    padding-right: 50px;
+    margin-bottom: 100px;
+   
+}
+
+.seller-auth .signup:hover {
+    transform: translateY(-5px);
+}
+
+.seller-auth h1 {
+    margin-bottom: 1.2rem;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #2874f0, #ff9900);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.seller-auth .common-form input {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease;
+}
+
+.seller-auth .common-form input:focus {
+    border-color: #2874f0;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(40, 116, 240, 0.2);
+}
+
+.seller-auth .common-form button {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #ff9900, #f08804);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.seller-auth .common-form button:hover {
+    background: linear-gradient(135deg, #f08804, #ff9900);
+    transform: translateY(-2px);
+}
+
+.seller-auth .common-form a {
+    display: block;
+    margin-top: 1rem;
+    color: #2874f0;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.seller-auth .common-form a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+button:hover{
+    color: red;
+}
+.is-invalid {
+    border-color: red;
+}

@@ -1,0 +1,114 @@
+.product-list {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff; /* White background for better readability */
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  color: #333; /* Darker text color for contrast */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.product-list h2 {
+  text-align: center;
+  margin-bottom: 14px;
+  color: #4a4a4a; /* Dark gray for the heading */
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+
+/* Ensure that the delete message does not create unwanted space */
+.product-list p {
+  margin: 0; /* Remove default margin to prevent extra space */
+}
+
+/* Style for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+th {
+  background: #6e8efb; /* Soft blue background for table headers */
+  color: #ffffff; /* White text color for contrast */
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+td {
+  background: #f0f4ff; /* Light blue background for table cells */
+  font-size: 15px;
+  color: #333; /* Darker text color for readability */
+}
+
+td img {
+  max-width: 80px; /* Adjust the size of the image */
+  border-radius: 10px; /* Rounded corners for images */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for images */
+}
+
+tr:nth-child(even) td {
+  background: #e6edff; /* Slightly darker blue for even rows */
+}
+
+tr:hover td {
+  background: #d0d8ff; /* Darker blue on hover */
+  color: #000; /* Black text on hover */
+  font-weight: 500;
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
+table th:first-child,
+table td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+table th:last-child,
+table td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Style for action icons */
+td fa-icon {
+  font-size: 20px; /* Adjust the size of the icon */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  color: #ff4d4d; /* Red color for delete icon */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+td fa-icon:hover {
+  color: #e60000; /* Darker red on hover */
+  transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+@media (max-width: 600px) {
+  .product-list {
+    padding: 15px;
+  }
+  
+  th, td {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .product-list h2 {
+    font-size: 24px;
+  }
+
+  td img {
+    max-width: 60px; /* Adjust image size for smaller screens */
+  }
+}

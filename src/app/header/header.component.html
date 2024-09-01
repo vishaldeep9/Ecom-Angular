@@ -1,0 +1,27 @@
+<nav class="nav">
+    <h1><a routerLink="/">E-COMM</a></h1>
+    <div *ngIf="menuType==='default'">
+        <input type="text" placeholder="search for products" (keyup)="searchProduct($event)" (blur)="hideSearch()" #searchInput>
+        <button (click)="submitSearch(searchInput.value)">Search</button>
+        <ul class="suggested-result" *ngIf="searchResult">
+          <li *ngFor="let item of searchResult">
+            <!-- router link is not working bcz of blur function  -->
+            <a (mousedown)="redirectToDetails(item.id)" id="a">{{item.name}}</a>
+          </li>  
+        </ul>
+    </div>
+  <div [ngSwitch]="menuType" class="menu">
+    <ul *ngSwitchCase="'default'">
+        <li><a routerLink="">Home</a></li>
+        <li><a routerLink="seller-auth">Seller</a></li>
+        <li><a routerLink="login">Login</a></li>
+        <li><a routerLink="cart">Cart(0)</a></li> 
+    </ul>
+    <ul *ngSwitchCase="'seller'">
+        <li><a routerLink="seller-add-product">Add Product</a></li>
+        <li><a routerLink="seller-home">List</a></li>
+        <li><a (click)="logout()">Logout </a></li> 
+        <li><a routerLink="login">Welcome {{sellerName | titlecase}}!</a></li>
+    </ul>
+  </div>
+</nav>

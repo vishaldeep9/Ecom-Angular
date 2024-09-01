@@ -1,0 +1,32 @@
+<div class="product-list">
+  <h2>Product List</h2>
+  <p id="errormessage" style="text-align: center;color: green;">{{deleteMessage}}</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Color</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of productList">
+        <td><img src="{{product.imageUrl}}" alt=""></td>
+        <td>{{product.name}}</td>
+        <td>{{ product.price | currency:'INR' }}</td>
+        <td>{{ product.color }}</td>
+        <td>{{ product.category }}</td>
+        <td>{{ product.description }}</td>
+        <td>
+          <fa-icon (click)="deleteProduct(product.id)" [icon]="icon"></fa-icon>
+          <!-- based on that id, it is opening that edit page -->
+          <a style="margin-left: 20px;" routerLink="/seller-update-product/{{product.id}}"> <fa-icon  [icon]=" updateIcon"></fa-icon></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
