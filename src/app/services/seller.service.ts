@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root',  
 })
 export class SellerService {
   //so, that i can go on seller-home after sign up and sign in only
@@ -14,17 +14,19 @@ export class SellerService {
   isLoginError=new EventEmitter<boolean>(false)
 
   //we have to keep seller data into local storage so, that after refresh still seller will be in seller-home-page
-  //bcz result there will be lots of data and we can't keep  directly(in form of object) into local storage , so we need seller body and that body should be in from of JSON.Stringyf and we keep in this form into local storage
+  
   constructor(private http: HttpClient, private router: Router) {}
 
   userSignUp(data: signUp) {
     return (
       this.http
         .post("http://localhost:3000/'seller", data, { observe: 'response' })
-        // to get JSON server request we are taking observerf
+          //if we want to check his response with body  so, we have to use observe
+        // to get JSON server request we are taking observe
         .subscribe((result) => {
           this.isSellerLoggedIn.next(true);
           localStorage.setItem('seller', JSON.stringify(result.body));
+          //bcz result there will be lots of data and we can't keep  directly(in form of object) into local storage , so we need seller body and that body should be in from of JSON.Stringify and we keep in this form into local storage
           this.router.navigate(['seller-home']);
         })
     );

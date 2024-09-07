@@ -10,6 +10,7 @@ export interface login{
    
 }
 export interface product{
+    quantity: number |undefined
     name:string,
     price:number,
     color:string,
@@ -17,4 +18,16 @@ export interface product{
     description:string,
     imageUrl:string,
     id:string
+}
+export interface cart{
+    quantity: number |undefined
+    name:string,
+    price:number,
+    color:string,
+    category:string,
+    description:string,
+    imageUrl:string,
+    id:string |undefined ,
+    userId:string,
+    productId:string
 }

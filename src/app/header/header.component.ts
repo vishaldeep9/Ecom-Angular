@@ -9,19 +9,20 @@ import { product } from '../data-types';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-
   // to check which type it is like , seller or user & using this we will apply condition on html page
   menuType: string = 'default';
   sellerName: string = '';
   searchResult: undefined | product[];
-
+  userName: string = '';
+  cartItems = 0;
   constructor(private route: Router, private productService: ProductsService) {}
 
   ngOnInit(): void {
     // if something changes on route then, check
     this.route.events.subscribe((value: any) => {
+      // console.warn(value);
       if (value.url) {
-        console.log(value.url);
+        //catching url ~ means end point of url we are checking after catching
         if (localStorage.getItem('seller') && value.url.includes('seller')) {
           console.log('we are in seller Area');
           this.menuType = 'seller';
@@ -32,16 +33,38 @@ export class HeaderComponent {
             let sellerData = sellerStore && JSON.parse(sellerStore)[0];
             this.sellerName = sellerData.name;
           }
+        } else if (localStorage.getItem('user')) {
+          let userStore = localStorage.getItem('user');
+          //  checking that userStore is not undefined
+          let userData = userStore && JSON.parse(userStore);
+          this.userName = userData.name;
+          this.menuType = 'user';
         } else {
           console.log('we are in outside of seller area');
           this.menuType = 'default';
         }
       }
-    });
+     });
+     
+     let cartData = localStorage.getItem('localCart');
+     if (cartData) {
+       this.cartItems = JSON.parse(cartData).length;
+      }
+      // console.log(this.cartItems);
+      //* problem form local storage was , it was updating cart quantity after refresh  
+      this.productService.cartDataSubject.subscribe((result)=>{
+        this.cartItems=result.length;
+      })
+
   }
+
   logout() {
     localStorage.removeItem('seller');
     this.route.navigate(['/']);
+  }
+  userLogout() {
+    localStorage.removeItem('user');
+    this.route.navigate(['/user-auth']);
   }
   searchProduct(query: KeyboardEvent) {
     if (query) {
@@ -59,10 +82,10 @@ export class HeaderComponent {
     this.searchResult = undefined;
   }
   submitSearch(value: string) {
-   console.warn(value);
-  this.route.navigate([`search/${value}`])
+    console.warn(value);
+    this.route.navigate([`search/${value}`]);
   }
   redirectToDetails(id: string) {
-   this.route.navigate([`/product-detail/${id}`])
-    }
+    this.route.navigate([`/product-detail/${id}`]);
+  }
 }
