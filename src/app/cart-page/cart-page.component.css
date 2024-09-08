@@ -1,0 +1,152 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+.cart-page {
+    width: 100%; /* Full width */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for the content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.cart-page h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #343a40; /* Darker gray for the title */
+}
+
+.row {
+    display: flex; /* Flexbox for side-by-side layout */
+    gap: 20px;
+    align-items: flex-start; /* Align items at the start */
+}
+
+.details {
+    flex: 1; /* Allow to take available space */
+    background-color: #f1f9ff; /* Light blue background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.details ul {
+    display: flex; /* Display all items in a single row */
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow-x: auto; /* Allow scrolling if content overflows */
+}
+
+.details li {
+    flex: 0 0 auto; /* Prevents the items from shrinking */
+    margin-right: 15px; /* Adds spacing between items */
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #212529; /* Dark text color */
+}
+
+.details li img {
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.summary {
+    width: 25%;
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: fit-content; /* Adjust height to content */
+}
+
+.summary h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #343a40; /* Darker gray for headings */
+    text-align: center;
+}
+
+.summary ul {
+    list-style: none;
+    padding: 0;
+}
+
+.summary ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+
+.summary ul li h4 {
+    margin: 0;
+    color: #333;
+}
+
+/* Updated button styling for smaller size */
+.form-button {
+    padding: 4px 8px; /* Reduced padding for smaller button */
+    background-color: #007bff; /* Blue color for buttons */
+    color: #fff;
+    border: none;
+    border-radius: 3px; /* Slightly smaller border radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    font-size: 14px; /* Smaller font size */
+}
+.button{
+    width: 100%;
+    padding: 6px 10px; /* Reduced padding for smaller button */
+    background-color: #007bff; /* Blue color for buttons */
+    color: #fff;
+    border: none;
+    border-radius: 3px; /* Slightly smaller border radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 15px; /* Smaller font size */
+}
+.button:hover{
+    background-color: #0a06f7;
+}
+.form-button:hover {
+    background-color: #0a06f7; /* Darker blue on hover */
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Stack vertically on smaller screens */
+    }
+
+    .details, .summary {
+        width: 100%; /* Full width for small screens */
+        margin-top: 20px;
+    }
+
+    .details ul {
+        flex-direction: row; /* Maintain row direction on smaller screens */
+        overflow-x: auto; /* Allow horizontal scrolling */
+    }
+
+    .details li {
+        flex: 0 0 auto; /* Prevent shrinking on smaller screens */
+    }
+}

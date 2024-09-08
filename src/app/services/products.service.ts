@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
-import { cart, product } from '../data-types';
+import { cart, order, product } from '../data-types';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -50,6 +50,7 @@ export class ProductsService {
     if (!localCart) {
       //^ Why [data] array? -> bcz our cartData is array & we are storing that updated cartData in else condition ,so we if have to take array [data] bcz in starting if i define data as object then it will be treat as object forever during saving in local storage
       localStorage.setItem('localCart', JSON.stringify([data]));
+      this.cartDataSubject.emit([data]);
     }
     // * if is there is already something inside localstorage
     else {
@@ -77,5 +78,31 @@ export class ProductsService {
 
   addToCartByApi(cartData: cart) {
     return this.http.post('http://localhost:3000/cart', cartData);
+  }
+  // * right now , only current computer know what is the userId & based on that in local computer it is showing cart, but if logged in from different computer with same userId the automatically saved cart iTem should be display in the cart based on relevant userId
+  getCartListById(userId: string) {
+    return this.http
+      .get<product[]>('http://localhost:3000/cart?userId=' + userId, {
+        observe: 'response',
+      })
+      .subscribe((result) => {
+        console.log(result);
+        if (result && result.body) {
+          //? result.body bcz our object is coming inside body
+          this.cartDataSubject.emit(result.body);
+        }
+      });
+  }
+  removeToCartById(cartId: string) {
+    return this.http.delete('http://localhost:3000/cart/' + cartId);
+  }
+
+  currentCart() {
+    let user = localStorage.getItem('user');
+    let userId = user && JSON.parse(user).id;
+    return this.http.get<cart[]>('http://localhost:3000/cart?userId=' + userId);
+  }
+  orderNow(data:order){
+    return this.http.post("http://localhost:3000/orders",data);
   }
 }

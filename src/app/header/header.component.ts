@@ -39,6 +39,7 @@ export class HeaderComponent {
           let userData = userStore && JSON.parse(userStore);
           this.userName = userData.name;
           this.menuType = 'user';
+          this.productService.getCartListById(userData.id)
         } else {
           console.log('we are in outside of seller area');
           this.menuType = 'default';
@@ -61,6 +62,8 @@ export class HeaderComponent {
   logout() {
     localStorage.removeItem('seller');
     this.route.navigate(['/']);
+    //after logged out , cart quantity should be 0
+    this.productService.cartDataSubject.emit([]);
   }
   userLogout() {
     localStorage.removeItem('user');
