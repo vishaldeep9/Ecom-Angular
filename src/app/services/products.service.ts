@@ -105,4 +105,23 @@ export class ProductsService {
   orderNow(data:order){
     return this.http.post("http://localhost:3000/orders",data);
   }
+
+  //? to showing order history
+  myOrderList(){
+    let user = localStorage.getItem('user');
+    let userId = user && JSON.parse(user).id;
+    return this.http.get<order[]>('http://localhost:3000/orders?userId=' + userId);
+  }
+  //? for doing empty cart item after placing order
+  deleteCartItems(cartId:string){
+    return this.http.delete('http://localhost:3000/cart/' + cartId,{observe:'response'}).subscribe((result)=>{
+      if(result){
+        //? here only we are deleting one object 
+        this.cartDataSubject.emit([]);
+      }
+    })
+  }
+  cancelOrder(orderId:string){
+    return this.http.delete("http://localhost:3000/orders/"+orderId);
+  }
 }

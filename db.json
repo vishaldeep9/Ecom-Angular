@@ -260,70 +260,13 @@
       "password": "3333"
     }
   ],
-  "cart": [
-    {
-      "id": "07e5",
-      "name": "TP-Link 600 Mbps WiFi Wireless Network USB Adapter for Desktop Pc",
-      "price": 1015.25,
-      "color": "Black",
-      "category": "Computer Accessories ",
-      "description": "TP-Link 600 Mbps WiFi Wireless Network USB Adapter for Desktop Pc with 2.4Ghz/5Ghz High Gain Dual Band 5Dbi Antenna Wi-Fi,Supports Windows 11/10/8.1/8/7/Xp,Mac Os 10.15&Earlier(Archer T2U Plus),Black",
-      "imageUrl": "https://f.media-amazon.com/images/I/41Qo0EGG4TL._SX522_.jpg",
-      "quantity": 2,
-      "userId": "b2ca",
-      "productId": "82c7"
-    },
-    {
-      "id": "71f5",
-      "name": "Lenovo L-Series 54.48 cm (21.45 inch) FHD Ultraslim Monitor",
-      "price": 5465.25,
-      "color": "White",
-      "category": "Computer Accessories ",
-      "description": "Lenovo L-Series 54.48 cm (21.45 inch) FHD Ultraslim Monitor |16.7 Mn Colors, 75Hz, 4ms, AMD FreeSync, HDMI, TUV Eye Comfort & Low Blue Light, Smart Display Customization Artery L22e-40",
-      "imageUrl": "https://f.media-amazon.com/images/I/71uAPvwB5uL._SL1500_.jpg",
-      "quantity": 2,
-      "userId": "b2ca",
-      "productId": "e611"
-    },
-    {
-      "id": "c4d5",
-      "name": "Supersox Ankle Socks for Men & Women (Unisex) ",
-      "price": 583.4,
-      "color": "(Black, White, Grey Melange)",
-      "category": "Clothe",
-      "description": "Supersox Ankle Socks for Men & Women (Unisex) Made With Durable, Breathable Cotton, Ideal for Regular Casual Wear- Pack of 3, Free Size (Black, White, Grey Melange)",
-      "imageUrl": "https://f.media-amazon.com/images/I/81CdTxYMb5L._SX679_.jpg",
-      "quantity": 5,
-      "userId": "b2ca",
-      "productId": "297c"
-    },
-    {
-      "id": "05d7",
-      "name": "Dell MS116 Wired Optical Mouse",
-      "price": 245.76,
-      "color": "Black",
-      "category": "Computer Accessories ",
-      "description": "Dell MS116 Wired Optical Mouse, 1000DPI, LED Tracking, Scrolling Wheel, Plug and Play",
-      "imageUrl": "https://f.media-amazon.com/images/I/51a1LryFTZS._SL1500_.jpg",
-      "quantity": 1,
-      "userId": "b2ca",
-      "productId": "a29e"
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "id": "a670",
       "email": "09vishaldeep@gmail.com",
       "address": "Bangalore",
       "contact": "7004412480",
-      "userId": "b2ca",
-      "totalPrice": 17836.136
-    },
-    {
-      "id": "2403",
-      "email": "09vishaldeep@gmail.com",
-      "address": "Bangalore",
-      "contact": "07004412480",
       "userId": "b2ca",
       "totalPrice": 17836.136
     }
